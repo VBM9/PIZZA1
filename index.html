@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slice Sensation - Artisan Pizza</title>
+    <meta name="description" content="Experience artisan pizza crafted with passion and served with pride">
+    <meta name="theme-color" content="#ff6b6b">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Slice<span>Sensation</span></a>
+            <nav aria-label="Main navigation">
+
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <div class="badge">Artisanal Quality</div>
+                <h1>Crafted with Passion,<br> Served with Pride</h1>
+                <p>Experience the perfect blend of traditional recipes and modern culinary artistry</p>
+                <div class="hero-buttons">
+                    <a href="menu.html" class="btn btn-primary khmer-font" style="font-size: 23px;">មីនុយ - MENU</a>
+                    <!-- <a href="about.html" class="btn btn-outline">Contact</a> -->
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true">
+                    <path d="M12 5v14"></path>
+                    <path d="m19 12-7 7-7-7"></path>
+                </svg>
+            </div>
+        </section>
+
+        <!-- Featured Pizzas Section -->
+        <section class="featured-pizzas">
+            <div class="container">
+                <h2>Our Signature Pizzas</h2>
+                <p class="section-description">Handcrafted with premium ingredients and baked to perfection</p>
+
+                <div class="pizza-grid" id="featured-pizzas-grid">
+                    <!-- Pizza cards will be inserted here by JavaScript -->
+                </div>
+
+                <a href="menu.html" class="btn btn-accent view-all">View Full Menu</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3 class="footer-logo">SliceSensation</h3>
+                    <p>Crafting perfect pizzas since 2010. Every slice tells our story of passion and tradition.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" aria-hidden="true">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" aria-hidden="true">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" aria-hidden="true">
+                                <path
+                                    d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="menu.html">Menu</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>Hours</h4>
+                        <ul class="hours-list">
+                            <li><span>Mon - Thu:</span> 11am - 10pm</li>
+                            <li><span>Fri - Sat:</span> 11am - 11pm</li>
+                            <li><span>Sunday:</span> 12pm - 9pm</li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>Contact</h4>
+                        <address>
+                            <p>123 Pizza Lane, Foodville</p>
+                            <p>Phone: <a href="tel:+11234567890">(123) 456-7890</a></p>
+                            <p>Email: <a href="mailto:hello@slicepizzeria.com">hello@slicepizzeria.com</a></p>
+                        </address>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 SliceSensation. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>
