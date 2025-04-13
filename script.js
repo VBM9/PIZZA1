@@ -188,6 +188,7 @@ const contactForm = document.getElementById('contact-form');
 const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
 const navLinks = document.querySelector('.nav-links');
 
+
 // Wait for the DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
   // Create the dark mode toggle container
