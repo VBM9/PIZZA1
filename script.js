@@ -1,6 +1,3 @@
-// Modern JavaScript with ES6+ features for pizza website
-
-// Pizza Menu data
 const pizzaMenu = [
   {
     id: 1,
@@ -34,7 +31,116 @@ const pizzaMenu = [
       fat: "48g"
     }
   },
-
+  {
+    id: 3,
+    name: "Pepperoni",
+    description: "Tomato sauce, mozzarella, and spicy pepperoni slices",
+    price: 16.99,
+    image: "https://images.unsplash.com/photo-1506354666786-959d6d497f1a?auto=format&fit=crop&q=80&w=2070",
+    isBestseller: true,
+    category: "classic",
+    ingredients: ["Tomato Sauce", "Mozzarella", "Pepperoni"],
+    nutritionalInfo: {
+      calories: 980,
+      protein: "36g",
+      carbs: "88g",
+      fat: "52g"
+    }
+  },
+  {
+    id: 4,
+    name: "Vegetarian Supreme",
+    description: "Tomato sauce, mozzarella, bell peppers, mushrooms, red onions, and olives",
+    price: 17.99,
+    image: "https://images.unsplash.com/photo-1604917877934-07d8d248d396?auto=format&fit=crop&q=80&w=2070",
+    isVegetarian: true,
+    category: "vegetarian",
+    ingredients: ["Tomato Sauce", "Mozzarella", "Bell Peppers", "Mushrooms", "Red Onions", "Black Olives"],
+    nutritionalInfo: {
+      calories: 780,
+      protein: "22g",
+      carbs: "95g",
+      fat: "36g"
+    }
+  },
+  {
+    id: 5,
+    name: "BBQ Chicken",
+    description: "BBQ sauce, smoked chicken, red onions, and cilantro",
+    price: 19.99,
+    image: "https://images.unsplash.com/photo-1594007654729-407eedc4fe0f?auto=format&fit=crop&q=80&w=2069",
+    category: "specialty",
+    ingredients: ["BBQ Sauce", "Mozzarella", "Smoked Chicken", "Red Onions", "Cilantro"],
+    nutritionalInfo: {
+      calories: 930,
+      protein: "42g",
+      carbs: "92g",
+      fat: "44g"
+    }
+  },
+  {
+    id: 6,
+    name: "Hawaiian",
+    description: "Tomato sauce, mozzarella, ham, and pineapple",
+    price: 16.99,
+    image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&q=80&w=2081",
+    category: "classic",
+    ingredients: ["Tomato Sauce", "Mozzarella", "Ham", "Pineapple"],
+    nutritionalInfo: {
+      calories: 870,
+      protein: "32g",
+      carbs: "94g",
+      fat: "38g"
+    }
+  },
+  {
+    id: 7,
+    name: "Meat Lover's",
+    description: "Tomato sauce, mozzarella, pepperoni, sausage, bacon, and ground beef",
+    price: 21.99,
+    image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&q=80&w=2070",
+    isBestseller: true,
+    category: "specialty",
+    ingredients: ["Tomato Sauce", "Mozzarella", "Pepperoni", "Sausage", "Bacon", "Ground Beef"],
+    nutritionalInfo: {
+      calories: 1150,
+      protein: "58g",
+      carbs: "86g",
+      fat: "64g"
+    }
+  },
+  {
+    id: 8,
+    name: "Buffalo Chicken",
+    description: "Buffalo sauce, grilled chicken, blue cheese crumbles, and ranch drizzle",
+    price: 19.99,
+    image: "https://images.unsplash.com/photo-1571066811602-716837d681de?auto=format&fit=crop&q=80&w=2068",
+    isNew: true,
+    category: "specialty",
+    ingredients: ["Buffalo Sauce", "Mozzarella", "Grilled Chicken", "Blue Cheese", "Ranch Drizzle"],
+    nutritionalInfo: {
+      calories: 940,
+      protein: "46g",
+      carbs: "84g",
+      fat: "50g"
+    }
+  },
+  {
+    id: 9,
+    name: "Mediterranean",
+    description: "Olive oil base, mozzarella, feta, spinach, olives, sun-dried tomatoes, and artichokes",
+    price: 18.99,
+    image: "https://images.unsplash.com/photo-1528137871618-79d2761e3fd5?auto=format&fit=crop&q=80&w=2070",
+    isVegetarian: true,
+    category: "specialty",
+    ingredients: ["Olive Oil", "Mozzarella", "Feta", "Spinach", "Olives", "Sun-dried Tomatoes", "Artichokes"],
+    nutritionalInfo: {
+      calories: 860,
+      protein: "26g",
+      carbs: "82g",
+      fat: "46g"
+    }
+  }
 ];
 
 // DOM Elements using modern selectors
