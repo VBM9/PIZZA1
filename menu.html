@@ -15,20 +15,47 @@
     <header class="navbar">
         <div class="container">
             <a href="index.html" class="logo">Slice<span>Sensation</span></a>
-            <!-- <nav>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="menu.html" class="active">Menu</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-            <button class="mobile-menu-btn" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
+            <!-- Add this to your header section, right before the closing </nav> tag -->
+            <button class="search-toggle-btn" aria-label="Search">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
             </button>
-        </div> -->
+
+            <!-- Add this right after your header or navigation section -->
+            <div class="search-container">
+                <div class="search-content">
+                    <div class="search-header">
+                        <h2>Search Pizzas</h2>
+                        <button class="search-close-btn" aria-label="Close search">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <line x1="18" y1="6" x2="6" y2="18"></line>
+                                <line x1="6" y1="6" x2="18" y2="18"></line>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="search-input-container">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                        <input type="text" id="search-input"
+                            placeholder="Search for pizzas by name, price, or category...">
+                    </div>
+                    <div class="search-tags">
+                        <span class="search-tag">Try: </span>
+                        <span class="search-tag clickable">Margherita</span>
+                        <span class="search-tag clickable">specialty</span>
+                        <span class="search-tag clickable">under $15</span>
+                    </div>
+                    <div id="search-results" class="search-results"></div>
+                </div>
+            </div>
     </header>
 
     <main>
