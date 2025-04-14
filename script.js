@@ -68,7 +68,7 @@ const pizzaMenu = [
     name: "BBQ Chicken",
     description: "BBQ sauce, smoked chicken, red onions, and cilantro",
     price: 19.99,
-    image: "https://images.unsplash.com/photo-1594007654729-407eedc4fe0f?auto=format&fit=crop&q=80&w=2069",
+    image: "https://howtobbqright.com/wp-content/uploads/2024/05/BBQchicken640.jpg",
     category: "specialty",
     ingredients: ["BBQ Sauce", "Mozzarella", "Smoked Chicken", "Red Onions", "Cilantro"],
     nutritionalInfo: {
@@ -584,174 +584,189 @@ const initKeyboardShortcuts = () => {
 const injectModalStyles = () => {
   const style = document.createElement('style');
   style.textContent = `
-    .modal-container {
-      display: grid;
-      place-items: center;
-      position: fixed;
-      inset: 0;
-      background-color: rgb(0 0 0 / 75%);
-      z-index: 1000;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.3s ease;
-    }
-    
-    .modal-container.active {
-      opacity: 1;
-      pointer-events: all;
-    }
-    
-    .pizza-modal {
-      background: #333;
-      border-radius: 1.125rem;
-      max-width: 800px;
-      width: min(80%, 800px);
-      max-height: 90vh;
-      overflow-y: auto;
-      box-shadow: 0 4px 20px rgb(0 0 0 / 20%);
-      animation: modalFadeIn 0.3s ease;
-    }
-    
-    @keyframes modalFadeIn {
-      from { 
-        opacity: 0; 
-        transform: scale(0.95); 
-      }
-      to { 
-        opacity: 1; 
-        transform: scale(1); 
-      }
-    }
-    
-    .pizza-modal-content {
-      position: relative;
-    }
-    
-    .close-modal-btn {
-      position: absolute;
-      top: 0.625rem;
-      right: 0.625rem;
-      background: rgb(0 0 0 / 60%);
-      color: white;
-      border: none;
-      border-radius: 50%;
-      width: 2.5rem;
-      height: 2.5rem;
-      font-size: 1.875rem;
-      cursor: pointer;
-      display: grid;
-      place-items: center;
-      z-index: 10;
-      transition: background-color 0.2s ease;
-      
-      &:hover {
-        background: rgb(0 0 0 / 80%);
-      }
-    }
-    
-    .pizza-modal-header {
-      display: flex;
-      flex-direction: column;
-      
-      @media (min-width: 768px) {
-        flex-direction: row;
-        align-items: center;
-      }
-    }
-    
+.modal-container {
+  display: grid;
+  place-items: center;
+  position: fixed;
+  inset: 0;
+  background-color: rgb(0 0 0 / 75%);
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.modal-container.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.pizza-modal {
+  background: #333;
+  border-radius: 1.125rem;
+  max-width: 800px;
+  width: min(90%, 800px);
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 20px rgb(0 0 0 / 20%);
+  animation: modalFadeIn 0.3s ease;
+}
+
+@keyframes modalFadeIn {
+  from { 
+    opacity: 0; 
+    transform: scale(0.95); 
+  }
+  to { 
+    opacity: 1; 
+    transform: scale(1); 
+  }
+}
+
+.pizza-modal-content {
+  position: relative;
+}
+
+.close-modal-btn {
+  position: absolute;
+  top: 0.625rem;
+  right: 0.625rem;
+  background: rgb(0 0 0 / 60%);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1.875rem;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  z-index: 10;
+  transition: background-color 0.2s ease;
+}
+
+.close-modal-btn:hover {
+  background: rgb(0 0 0 / 80%);
+}
+
+.pizza-modal-header {
+  display: flex;
+  flex-direction: column;
+}
+
 .pizza-modal-image {
   position: relative;
-  height: 270px;
+  width: 100%;
+  height: 200px;
   overflow: hidden;
-  border-radius: 0.5rem 0.5rem 0 0;
+  border-radius: 1.125rem 1.125rem 0 0;
 }
 
 .pizza-modal-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
+.pizza-modal-title {
+  padding: 1.25rem 1.25rem 0 1.25rem;
+}
+
+.pizza-modal-title h2 {
+  margin: 0 0 0.3125rem 0;
+  font-size: 1.5rem;
+}
+
+.pizza-modal-category {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #777;
+  text-transform: capitalize;
+}
+
+.pizza-modal-price {
+  margin: 0.3125rem 0 0 0;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: white;
+}
+
+.pizza-modal-body {
+  padding: 0 1.25rem 1.25rem 1.25rem;
+}
+
+.pizza-modal-description,
+.pizza-modal-ingredients {
+  margin-top: 0.9375rem;
+}
+
+.pizza-modal-body h3 {
+  margin: 0 0 0.625rem 0;
+  font-size: 1.125rem;
+  color: gray;
+}
+
+.pizza-modal-ingredients ul {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.pizza-modal-ingredients ul li {
+  margin-bottom: 0.125rem;
+}
+
+:root:has(.modal-container.active) {
+  overflow: hidden;
+}
+
+.view-details-btn {
+  margin-top: 0.625rem;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: background-color 0.2s ease;
+}
+
+.view-details-btn:hover {
+  background-color: #3a7bc8;
+}
+
+/* Mobile responsive adjustments for better display on phones */
+@media (max-width: 767px) {
+  .pizza-modal {
+    width: 95%;
+    border-radius: 1rem;
+  }
+  
+  .pizza-modal-image {
+    height: 230px;
+  }
+}
+
+/* Tablet and desktop view */
 @media (min-width: 768px) {
+  .pizza-modal-header {
+    flex-direction: row;
+    align-items: stretch;
+  }
+  
   .pizza-modal-image {
     width: 40%;
     height: auto;
     min-height: 250px;
-    border-radius: 0.5rem 0 0 0;
+    border-radius: 1.125rem 0 0 0;
   }
-}
-    
-    .pizza-modal-title {
-      padding: 1.25rem 1.25rem 0 1.25rem;
-      
-      & h2 {
-        margin: 0 0 0.3125rem 0;
-        font-size: 1.5rem;
-      }
-      
-      @media (min-width: 768px) {
-        width: 60%;
-        padding: 1.25rem;
-      }
-    }
-    
-    .pizza-modal-category {
-      margin: 0;
-      font-size: 0.875rem;
-      color: #777;
-      text-transform: capitalize;
-    }
-    
-    .pizza-modal-price {
-      margin: 0.3125rem 0 0 0;
-      font-size: 1.25rem;
-      font-weight: bold;
-      color: white;
-    }
-    
-    .pizza-modal-body {
-      padding: 0 1.25rem 1.25rem 1.25rem;
-    }
-    
-    .pizza-modal-description,
-    .pizza-modal-ingredients {
-      margin-top: 0.9375rem;
-    }
-    
-    .pizza-modal-body h3 {
-      margin: 0 0 0.625rem 0;
-      font-size: 1.125rem;
-      color: gray;
-    }
-    
-    .pizza-modal-ingredients ul {
-      margin: 0;
-      padding-left: 1.5rem;
-      
-      & li {
-        margin-bottom: 0.125rem;
-      }
-    }
-    
-    :root:has(.modal-container.active) {
-      overflow: hidden;
-    }
-    
-    .view-details-btn {
-      margin-top: 0.625rem;
-      background-color: #4a90e2;
-      color: white;
-      border: none;
-      border-radius: 0.25rem;
-      padding: 0.5rem 0.75rem;
-      cursor: pointer;
-      font-size: 0.875rem;
-      transition: background-color 0.2s ease;
-      
-      &:hover {
-        background-color: #3a7bc8;
-      }
-    }
+  
+  .pizza-modal-title {
+    width: 60%;
+    padding: 1.25rem;
+  }
+}    
   `;
   document.head.appendChild(style);
 };
