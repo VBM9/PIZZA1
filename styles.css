@@ -319,6 +319,93 @@ section {
   margin-bottom: 2.5rem;
 }
 
+/* Mobile styles for pizzas */
+@media (max-width: 767px) {
+  .pizza-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  /* Make all pizzas display like the second pizza (Truffle Mushroom) */
+  .pizza-grid .pizza-item {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .pizza-grid .pizza-item .pizza-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  /* Style for the "New" tag like on the Truffle Mushroom pizza */
+  .pizza-grid .pizza-item .tag {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-color: #ff6347;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  /* Pizza info styling */
+  .pizza-grid .pizza-item .pizza-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+  }
+  
+  .pizza-grid .pizza-item .pizza-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #f9f9f9;
+    margin: 0;
+  }
+  
+  .pizza-grid .pizza-item .pizza-price {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #ff6347;
+    margin: 0;
+  }
+  
+  .pizza-grid .pizza-item .pizza-description {
+    color: #a0a0a0;
+    font-size: 0.9rem;
+    margin-top: 8px;
+    line-height: 1.4;
+  }
+  
+  /* Animation for pizzas to slide in like the second one */
+  .pizza-grid .pizza-item {
+    opacity: 0;
+    animation: slideInPizza 0.5s ease-out forwards;
+  }
+  
+  @keyframes slideInPizza {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Staggered animation for each pizza item */
+  .pizza-grid .pizza-item:nth-child(1) { animation-delay: 0.1s; }
+  .pizza-grid .pizza-item:nth-child(2) { animation-delay: 0.2s; }
+  .pizza-grid .pizza-item:nth-child(3) { animation-delay: 0.3s; }
+  .pizza-grid .pizza-item:nth-child(4) { animation-delay: 0.4s; }
+}
+
 .pizza-card {
   background-color: var(--background);
   border-radius: var(--radius);
