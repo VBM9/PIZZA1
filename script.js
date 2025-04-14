@@ -230,12 +230,6 @@ const showPizzaDetails = (pizzaId) => {
           <h3>Description</h3>
           <p>${pizza.description}</p>
         </div>
-        <div class="pizza-modal-ingredients">
-          <h3>Ingredients</h3>
-          <ul>
-            ${pizza.ingredients.map(ingredient => `<li>${ingredient}</li>`).join('')}
-          </ul>
-        </div>
       </div>
     </div>
   `;
